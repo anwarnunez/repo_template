@@ -76,6 +76,17 @@ html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {'bootswatch_theme' : 'cosmo',
                       'bootstrap_version' : '3',
+                      # Render the next and previous page links in navbar. (Default: true)
+                      'navbar_sidebarrel': True,
+                      # Render the current pages TOC in the navbar. (Default: true)
+                      'navbar_pagenav': True,
+                      # Tab name for the current pages TOC. (Default: "Page")
+                      'navbar_pagenav_name': "Page content",
+                      'globaltoc_depth': 2,
+                      'navbar_links': [
+                          # ("Examples", "examples"),
+                          ("GitHub Repo", "http://anwarnunez.github.io/repo_template", True),
+                      ],
                       }
 
 # Add any paths that contain custom static files (such as style sheets) here,
