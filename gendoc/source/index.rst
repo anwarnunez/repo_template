@@ -1,5 +1,6 @@
-repo template
-=============
+===============
+ repo template
+===============
 
 
 .. toctree::
