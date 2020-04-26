@@ -21,7 +21,7 @@ script:
   - coverage run -m pytest
   - pip install -q Sphinx sphinx-gallery numpydoc sphinx-bootstrap-theme
   - cd gendoc
-  - sphinx-apidoc -o source/autodoc ../repo_template
+  - sphinx-apidoc -o source/autodoc ../repo_template -e
   - sphinx-autogen source/index.rst
   - make html && cd ..
   - touch gendoc/build/html/.nojekyll
