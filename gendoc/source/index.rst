@@ -1,7 +1,50 @@
-===============
- repo template
+===========================
+ Welcome to repo_template!
+===========================
+
+*Some general info*
+
+https://github.com/anwarnunez/repo_template
+
+
+
+What is repo_template?
+======================
+
+A long description of the repo.
+
+
+Installation
+============
+
+
+Clone the repo from GitHub and do the usual python install
+
+::
+
+   git clone https://github.com/anwarnunez/repo_template.git
+   cd repo_template
+   sudo python setup.py install
+
+
+Getting started
 ===============
 
+Some general code examples
+
+::
+   >>> import numpy as np
+
+Some specific examples
+
+::
+   >>> data = np.random.randn(100)
+
+
+Documentation
+=============
+
+Some general DOCs
 
 .. toctree::
    :maxdepth: 2
@@ -18,17 +61,16 @@ Tutorials
     auto_examples/index.rst
 
 
+API Reference
+=============
 
-API Documentation
-=================
+.. only:: html
 
-.. automodule:: repo_template
-   :members:
+   :Release: |version|
+   :Date: |today|
 
+.. only:: html
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   * :ref:`genindex`
+   * :ref:`modindex`
+   * :ref:`search`
