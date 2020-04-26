@@ -4,31 +4,38 @@ python:
   - "3.7"
   - "3.8"
 
+# system requirements
 before_install:
   - sudo apt-get install libopenblas-dev liblapack-dev
 
+# testing requirements
 before_install:
   - pip install codecov pytest-cov
+  - pip install matplotlib
 
-# command to install dependencies
+# install dependencies
 install:
   - pip install -r requirements.txt
   - python setup.py install
 
-
-# command to run tests
+# run tests
 script:
   - coverage run -m pytest
-  - pip install -q Sphinx sphinx-gallery numpydoc sphinx-bootstrap-theme
+
+# report coverage
+after_success:
+  - codecov
+
+# generate docs
+after_success:
+   - pip install -q Sphinx sphinx-gallery numpydoc sphinx-bootstrap-theme
   - cd gendoc
   - sphinx-apidoc -o source/autodoc ../repo_template -e
   - sphinx-autogen source/index.rst
   - make html && cd ..
   - touch gendoc/build/html/.nojekyll
 
-after_success:
-  - codecov
-
+# push to github
 deploy:
   - provider: pages
     skip_cleanup: true
