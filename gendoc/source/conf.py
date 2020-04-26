@@ -14,7 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_bootstrap_theme
-# import numpydoc
+import numpydoc
 
 # -- Project information -----------------------------------------------------
 
@@ -33,7 +33,6 @@ release = '0.0.0'
 # ones.
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.autosummary',
-              # 'numpydoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.coverage',
               'sphinx.ext.inheritance_diagram',
@@ -41,11 +40,12 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.napoleon',
               'sphinx.ext.githubpages',
               'sphinx_gallery.gen_gallery',
+              'numpydoc',
 ]
 
 autosummary_generate = True
-# numpydoc_class_members_toctree = True
-# numpydoc_show_class_members = True
+numpydoc_class_members_toctree = True
+numpydoc_show_class_members = True
 
 # # Sphinx-gallery
 sphinx_gallery_conf = {
