@@ -1,0 +1,40 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+
+before_install:
+  - sudo apt-get install libopenblas-dev liblapack-dev
+
+before_install:
+  - pip install codecov pytest-cov
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - python setup.py install
+
+
+# command to run tests
+script:
+  - coverage run -m pytest
+  - pip install -q Sphinx sphinx-gallery numpydoc sphinx-bootstrap-theme
+  - cd gendoc
+  - sphinx-apidoc -o source/autodoc ../repo_template
+  - make html && cd ..
+  - touch gendoc/build/html/.nojekyll
+
+after_success:
+  - codecov
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+    keep-history: true
+    on:
+      branch: master
+      # push only once
+      python: "3.7"
+    local_dir: gendoc/build/html/
