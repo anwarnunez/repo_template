@@ -1,0 +1,18 @@
+repo\_template package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   repo_template.template_module
+
+Module contents
+---------------
+
+.. automodule:: repo_template
+   :members:
+   :undoc-members:
+   :show-inheritance:
