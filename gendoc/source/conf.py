@@ -85,7 +85,7 @@ html_theme_options = {'bootswatch_theme' : 'cosmo',
                       'globaltoc_depth': 2,
                       'navbar_links': [
                           # ("Examples", "examples"),
-                          ("GitHub Repo", "http://anwarnunez.github.io/repo_template", True),
+                          ("GitHub Repo", "https://github.com/anwarnunez/repo_template/", True),
                       ],
                       }
 
