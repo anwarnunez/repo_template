@@ -1,0 +1,7 @@
+repo\_template.template\_module module
+======================================
+
+.. automodule:: repo_template.template_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
