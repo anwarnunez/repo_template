@@ -11,7 +11,7 @@ before_install:
 # testing requirements
 before_install:
   - pip install codecov pytest-cov
-  - pip install matplotlib
+  - pip install matplotlib pillow
 
 # install dependencies
 install:
