@@ -28,7 +28,7 @@ after_success:
 
 # generate docs
 after_success:
-  - pip install -q Sphinx sphinx-gallery numpydoc sphinx-bootstrap-theme
+  - pip install -q Sphinx sphinx-gallery numpydoc sphinx-bootstrap-theme sphinx-rtd-theme
   - cd gendoc
   - sphinx-apidoc -o source/autodoc ../repo_template -e
   - sphinx-autogen source/index.rst
