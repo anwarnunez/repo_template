@@ -45,14 +45,13 @@ Learn more
 Some general DOCs
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    self
-   auto_examples/index
 
 
-Tutorials
-=========
+Examples
+========
 
 .. toctree::
     :maxdepth: 3
