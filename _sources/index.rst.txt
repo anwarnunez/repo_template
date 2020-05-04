@@ -30,26 +30,25 @@ Clone the repo from GitHub and do the usual python install
 Getting started
 ===============
 
-Some general code examples
+Some general code examples:: 
 
-::
    >>> import numpy as np
 
-Some specific examples
+Some specific examples::
 
-::
    >>> data = np.random.randn(100)
 
 
-Documentation
-=============
+Learn more
+==========
 
 Some general DOCs
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-
+   
+   self
+   auto_examples/index
 
 
 Tutorials
@@ -69,8 +68,6 @@ API Reference
    :Release: |version|
    :Date: |today|
 
-.. only:: html
 
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`
+.. autosummary:: repo_template
+   :toctree: modules
