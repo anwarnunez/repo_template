@@ -74,7 +74,11 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-if 0:
+
+# RANDOMIZE THEME
+import numpy as np
+use_bootstrap = np.random.rand(1) > 0.5
+if use_bootstrap:
     html_theme = 'bootstrap'
     html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
     html_theme_options = {'bootswatch_theme' : 'cosmo',
@@ -91,7 +95,7 @@ if 0:
                               ("GitHub Repo", "https://github.com/anwarnunez/repo_template/", True),
                           ],
                           }
-if 1:
+else:
     html_theme = 'sphinx_rtd_theme'
     html_theme_options = {'canonical_url': '',
     #                       # 'analytics_id': 'UA-XXXXXXX-1',
