@@ -11,17 +11,19 @@ Some general DOCs
    self
 
 
-Examples
-========
 
 .. toctree::
     :maxdepth: 3
-
+    :caption: Examples
     auto_examples/index.rst
 
 
-API Reference
-=============
+.. toctree::
+   :caption: API Reference
+   :maxdepth: 2
+
+   autodoc/repo_templates
+
 
 .. autosummary:: repo_template
    :toctree: modules
