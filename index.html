@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to repo_template! &#8212; repo_template 0.0.0 documentation</title>
+    <title>Welcome to repo_template &#8212; repo_template 0.0.0 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -58,7 +58,7 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to repo_template!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to repo_template</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Tutorials</a><ul>
@@ -78,10 +78,14 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Welcome to repo_template!</a><ul>
+<li><a class="reference internal" href="#">Welcome to repo_template</a><ul>
 <li><a class="reference internal" href="#what-is-repo-template">What is repo_template?</a></li>
 <li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li><a class="reference internal" href="#create-github-access-token">Create GitHub access token</a></li>
+<li><a class="reference internal" href="#add-token-to-travis-repo-settings">Add token to travis repo settings</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#learn-more">Learn more</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 <li><a class="reference internal" href="#api-reference">API Reference</a></li>
@@ -131,31 +135,48 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="welcome-to-repo-template">
-<h1>Welcome to repo_template!<a class="headerlink" href="#welcome-to-repo-template" title="Permalink to this headline">¶</a></h1>
+<h1>Welcome to repo_template<a class="headerlink" href="#welcome-to-repo-template" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://travis-ci.com/anwarnunez/repo_template"><img alt="Build Status" src="https://travis-ci.com/anwarnunez/repo_template.svg?branch=master" /></a> <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause"><img alt="License" src="https://img.shields.io/badge/license-BSD%203--Clause-blue" /></a> <a class="reference external" href="https://codecov.io/gh/anwarnunez/repo_template"><img alt="codecov" src="https://codecov.io/gh/anwarnunez/repo_template/branch/master/graph/badge.svg" /></a> <a class="reference external" href="https://github.com/anwarnunez/repo_template"><img alt="GitHub" src="https://img.shields.io/badge/github-repo_template-blue" /></a></p>
 <p><em>Some general info</em></p>
 <p><a class="reference external" href="https://github.com/anwarnunez/repo_template">https://github.com/anwarnunez/repo_template</a></p>
 <div class="section" id="what-is-repo-template">
 <h2>What is repo_template?<a class="headerlink" href="#what-is-repo-template" title="Permalink to this headline">¶</a></h2>
-<p>A long description of the repo.</p>
+<p><em>A long description of the repo.</em></p>
+<p>The directory <cite>gendoc</cite> contains scripts neceesary for building website using sphinx and sphinx gallery.
+The <cite>.travis.yml</cite> file contains the commands needed for travis-ci to deploy the website to GitHub pages.</p>
+<p>The resulting template website can be seen here: <a class="reference external" href="https://anwarnunez.github.io/repo_template/">https://anwarnunez.github.io/repo_template/</a></p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Clone the repo from GitHub and do the usual python install</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">anwarnunez</span><span class="o">/</span><span class="n">repo_template</span><span class="o">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">repo_template</span>
-<span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/anwarnunez/repo_template.git
+<span class="nb">cd</span> repo_template
+sudo python setup.py install
 </pre></div>
 </div>
 </div>
 <div class="section" id="getting-started">
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p>Some general code examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
+<p>Requires minor configuration</p>
+<div class="section" id="create-github-access-token">
+<h3>Create GitHub access token<a class="headerlink" href="#create-github-access-token" title="Permalink to this headline">¶</a></h3>
+<p>This enables travis to push and create the gh-pages branch.</p>
+<p>github.com -&gt; public profile -&gt; developer settings -&gt; personal access tokens -&gt; generate new token</p>
+<ul class="simple">
+<li><p>Under <strong>Note</strong> write something descriptive (e.g. <cite>myrepo-travis-ghpages</cite>).</p></li>
+<li><p>Under  <strong>Select scopes</strong> select <strong>repo</strong>.</p></li>
+<li><p>Finally, click on <strong>Generate token</strong> and copy the token.</p></li>
+</ul>
 </div>
-<p>Some specific examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
+<div class="section" id="add-token-to-travis-repo-settings">
+<h3>Add token to travis repo settings<a class="headerlink" href="#add-token-to-travis-repo-settings" title="Permalink to this headline">¶</a></h3>
+<p>travis-ci -&gt; dashboard -&gt; select repo -&gt; settings</p>
+<ul class="simple">
+<li><p>Under <strong>Environmental variables</strong>, fill out:
+* <em>NAME</em>: <cite>GITHUB_TOKEN</cite>
+* <em>VALUE</em>: [paste the token]</p></li>
+<li><p>Finally, click <strong>ADD</strong></p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="learn-more">
@@ -163,7 +184,7 @@
 <p>Some general DOCs</p>
 <div class="toctree-wrapper compound">
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to repo_template!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to repo_template</a></li>
 </ul>
 </div>
 </div>
@@ -177,14 +198,6 @@
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">Release</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Date</dt>
-<dd class="field-even"><p>May 04, 2020</p>
-</dd>
-</dl>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
