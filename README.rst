@@ -43,7 +43,7 @@ Create GitHub access token
 
 This enables travis to push and create the gh-pages branch.
 
-github.com -> public profile -> developer settings -> personal access tokens -> generate new token
+github.com -> settings ("public profile") -> developer settings -> personal access tokens -> generate new token
 
 * Under **Note** write something descriptive (e.g. `myrepo-travis-ghpages`).
 * Under  **Select scopes** select **repo**.
