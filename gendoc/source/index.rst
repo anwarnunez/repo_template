@@ -13,16 +13,17 @@ Some general DOCs
 
 
 .. toctree::
-    :maxdepth: 3
     :caption: Examples
-    auto_examples/index.rst
+    :maxdepth: 3
+
+    auto_examples/index
 
 
 .. toctree::
    :caption: API Reference
    :maxdepth: 2
 
-   autodoc/repo_templates
+   autodoc/repo_template
 
 
 .. autosummary:: repo_template
